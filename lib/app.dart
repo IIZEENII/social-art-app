@@ -10,7 +10,7 @@ class SocialArtApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: SocialArtTheme.getTheme(),
-      title: 'Material App',
+      title: 'SocialArt',
       home: const HomeScreen(),
     );
   }
