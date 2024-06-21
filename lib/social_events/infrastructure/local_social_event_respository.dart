@@ -6,21 +6,21 @@ import 'package:socialart/social_events/domain/social_event.dart';
 class LocalSocialEventRespository implements SocialEventRepository {
   final List<SocialEvent> _socialEvents = [
     SocialEvent(
-      name: 'event',
+      name: 'Event',
       imageURL:
-          'https://i0.wp.com/www.fashionmeetsmusic.com/wp-content/uploads/2022/03/hanny-naibaho-aWXVxy8BSzc-unsplash-min.jpg?resize=640%2C427&ssl=1',
+          'https://mixmag.net/assets/uploads/images/_fullX2/dance-music-sustainbility-festivals-events.jpg',
       location: 'Paseo de montejo',
       date: 'Feb 02',
     ),
     SocialEvent(
-      name: 'event-2',
+      name: 'Event-2',
       imageURL:
-          'https://i0.wp.com/www.fashionmeetsmusic.com/wp-content/uploads/2022/03/hanny-naibaho-aWXVxy8BSzc-unsplash-min.jpg?resize=640%2C427&ssl=1',
+          'https://images.squarespace-cdn.com/content/v1/6226e0afc9720e0c8d606cba/33cf0565-0763-4cd6-82f9-5545d86a3ab7/HypeHotel2013.jpeg',
       location: 'Paseo de montejo',
       date: 'Feb 02',
     ),
     SocialEvent(
-      name: 'event-3',
+      name: 'Event-3',
       imageURL:
           'https://i0.wp.com/www.fashionmeetsmusic.com/wp-content/uploads/2022/03/hanny-naibaho-aWXVxy8BSzc-unsplash-min.jpg?resize=640%2C427&ssl=1',
       location: 'Paseo de montejo',
