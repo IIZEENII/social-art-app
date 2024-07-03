@@ -27,8 +27,7 @@ class SocialArtIcons {
   static const IconData heart = IconData(0xe912, fontFamily: _fontFamily);
   static const IconData star = IconData(0xe911, fontFamily: _fontFamily);
   static const IconData chevronUp = IconData(0xe901, fontFamily: _fontFamily);
-  static const IconData chevronRight =
-      IconData(0xe903, fontFamily: _fontFamily);
+  static const IconData chevronRight = IconData(0xe903, fontFamily: _fontFamily);
   static const IconData chevronLeft = IconData(0xe904, fontFamily: _fontFamily);
   static const IconData chevronDown = IconData(0xe90d, fontFamily: _fontFamily);
 }

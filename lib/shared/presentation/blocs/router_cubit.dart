@@ -5,6 +5,7 @@ import 'package:socialart/user_account/presentation/blocs/auth_cubit.dart';
 import 'package:socialart/user_account/presentation/blocs/auth_state.dart';
 import 'package:socialart/user_account/presentation/screens/auth/sign_in_screen.dart';
 import 'package:socialart/user_account/presentation/screens/auth/sign_up_screen.dart';
+import 'package:socialart/user_account/presentation/screens/auth/lets_go_started_screen.dart';
 
 final _router = GoRouter(
   routes: [
@@ -22,6 +23,11 @@ final _router = GoRouter(
       path: '/sign-up',
       name: 'sign-up',
       builder: (context, state) => const SignUpScreen(),
+    ),
+     GoRoute(
+      path: '/lets-go-started',
+      name: 'lets-go-started',
+      builder: (context, state) => const LestGoStartedScreen(),
     )
   ],
 );
@@ -35,7 +41,7 @@ class RouterCubit extends Cubit<GoRouter> {
 
   redirectTo() {
     if (_authCubit.state is! AuthLogged) {
-      state.goNamed('sign-in');
+      state.goNamed('lets-go-started');
       return;
     } 
 
