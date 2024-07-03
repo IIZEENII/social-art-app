@@ -5,12 +5,13 @@ import 'package:socialart/shared/presentation/blocs/router_cubit.dart';
 import 'package:socialart/user_account/domain/auth_repository.dart';
 import 'package:socialart/user_account/presentation/blocs/auth_cubit.dart';
 
-class SignInForm extends StatelessWidget {
+class SignUpForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+  final _usernameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  SignInForm({super.key});
+  SignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +19,23 @@ class SignInForm extends StatelessWidget {
       key: _formKey,
       child: Column(
         children: [
+          TextField(
+            controller: _usernameController,
+            style: const TextStyle(color: Colors.white),
+            decoration: InputDecoration(
+              prefixIcon: const Icon(Icons.person_outline),
+              prefixIconColor: Colors.white,
+              hintStyle: const TextStyle(color: SocialArtTheme.grey),
+              filled: true,
+              fillColor: SocialArtTheme.constrast,
+              hintText: 'username',
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
           TextField(
             controller: _emailController,
             style: const TextStyle(color: Colors.white),
@@ -64,19 +82,19 @@ class SignInForm extends StatelessWidget {
                       password: _passwordController.text,
                     ),
                   );
-              context.read<RouterCubit>().state.goNamed('home');
+              context.read<RouterCubit>().state.goNamed('sign-in');
             },
-            child: const Text('Sign In'),
+            child: const Text('Sign Up'),
           ),
           const SizedBox(height: 16),
           TextButton(
             onPressed: () {
-              context.read<RouterCubit>().state.goNamed('sign-up');
+              context.read<RouterCubit>().state.goNamed('sign-in');
             },
             child: const Text(
-              'Do not have an account? Sign Up',
-              textAlign: TextAlign.center,
+              'Alredy have an account? Sign In',
               style: SocialArtTheme.mediumNormal,
+              textAlign: TextAlign.center,
             ),
           ),
         ],

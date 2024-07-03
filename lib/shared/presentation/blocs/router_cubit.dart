@@ -4,6 +4,7 @@ import 'package:socialart/shared/presentation/screens/home_screen.dart';
 import 'package:socialart/user_account/presentation/blocs/auth_cubit.dart';
 import 'package:socialart/user_account/presentation/blocs/auth_state.dart';
 import 'package:socialart/user_account/presentation/screens/auth/sign_in_screen.dart';
+import 'package:socialart/user_account/presentation/screens/auth/sign_up_screen.dart';
 
 final _router = GoRouter(
   routes: [
@@ -16,6 +17,11 @@ final _router = GoRouter(
       path: '/sign-in',
       name: 'sign-in',
       builder: (context, state) => const SignInScreen(),
+    ),
+    GoRoute(
+      path: '/sign-up',
+      name: 'sign-up',
+      builder: (context, state) => const SignUpScreen(),
     )
   ],
 );
